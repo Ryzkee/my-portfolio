@@ -6,6 +6,7 @@ import { Link } from 'react-scroll';
 
 function Header() {
   const [active, setActive] = useState("Home");
+  const [bgColor, setBgColor] = useState("bg-[#3674B5]");
   
   return (
     <>
@@ -27,7 +28,7 @@ function Header() {
                   >
                     {item}
                     <span
-                      className={`absolute left-0 bottom-0 h-[2px] bg-[#40F8FF] transition-all duration-300 group-hover:w-full group-hover:bottom-[-2px] ${
+                      className={`absolute left-0 bottom-0 h-[2px] bg-[#3674B5] transition-all duration-300 group-hover:w-full group-hover:bottom-[-2px] ${
                         active === item ? "w-full bottom-[-2px]" : "w-0"
                       }`}
                     ></span>
@@ -37,10 +38,12 @@ function Header() {
             </ul>
           </nav>
           <div className='w-[10%] h-full flex items-center'>
-            <button className='border px-3 py-1 bg-[#40F8FF] rounded-md flex flex-row'>
+            <button className='border w-[70%] py-1 bg-[#3674B5] rounded-md flex justify-center flex-row hover:bg-transparent hover:border-white '
+                    onMouseEnter={() => setBgColor("bg-transparent")}
+                    onMouseLeave={() => setBgColor("bg-[#3674B5]")}>
               <a href="https://github.com/rjdaz" target='blank' className='flex'>
-                <p className=''>Github</p>
-                <img src={gitlogo} alt=""  className='w-5 h-5 ml-1 cursor-pointer'/>
+                <p className='text-white'>Github</p>
+                {bgColor === "bg-[#3674B5]" ? <img src={gitlogo} alt=""  className='w-5 h-5 ml-1 cursor-pointer'/> : null}
               </a>
             </button>
           </div>
