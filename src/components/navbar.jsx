@@ -22,7 +22,7 @@ function Header() {
                   <Link
                     to={item.toLowerCase()}
                     smooth={true}
-                    duration={700}
+                    duration={300}
                     className="text-white relative group cursor-pointer"
                     onClick={() => setActive(item)}
                   >
