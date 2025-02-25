@@ -35,8 +35,10 @@ function Header() {
           </nav>
           <div className='w-[10%] h-full flex items-center'>
             <button className='border px-3 py-1 bg-[#40F8FF] rounded-md flex flex-row'>
-              <p className=''>Github</p>
-              <img src={gitlogo} alt=""  className='w-5 h-5 ml-1 cursor-pointer'/>
+              <a href="https://github.com/rjdaz" target='blank' className='flex'>
+                <p className=''>Github</p>
+                <img src={gitlogo} alt=""  className='w-5 h-5 ml-1 cursor-pointer'/>
+              </a>
             </button>
           </div>
       </header>
