@@ -1,11 +1,26 @@
 import React from 'react'
 import Navbar from './components/navbar'
+import Home from './components/home'
+import About from './components/about'
+import Skills from './components/skills'
+import Projects from './components/projects'
+import Contacts from './components/contacts'
 
 function App() {
+  const aboutId = 'about',
+        homeId = 'home',
+        skillsId = 'skills',
+        projectsId = 'projects',
+        contactsId = 'contact'
 
   return (
-    <div className=' w-full h-screen bg-[#161A30]' >
-      <Navbar />
+    <div className=' w-full h-screen bg-[#161a30]' >
+      <Navbar aboutId={aboutId} homeId={homeId}/>
+      <Home homeId={homeId}/>
+      <About aboutId={aboutId}/>
+      <Skills skillsId={skillsId}/>
+      <Projects projectsId={projectsId}/>
+      <Contacts contactsId={contactsId}/>
     </div>
   )
 }
