@@ -39,7 +39,7 @@ function Home({ homeId }) {
           </div>
         </div>
         <div className='w-[50%] h-full flex items-center justify-center'>
-          <div className='relative bg-[#161a30] flex justify-center w-[60%] h-[60%] rounded-[50%] mt-[10%] border-15 border-[#3674B5] shadow-2xl shadow-white'>
+          <div className='relative bg-[#161a30] flex justify-center w-[70%] h-[70%] rounded-[50%] mt-[10%] border-15 border-[#3674B5] shadow-2xl shadow-white'>
             <img src={dp} alt="" className='absolute mt-[-10%]' />
           </div>
         </div>
