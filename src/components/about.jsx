@@ -3,7 +3,7 @@ import React from 'react';
 function About({ aboutId }) {
   return (
     <>
-      <div className='w-full h-screen bg-green-400' id={aboutId}>
+      <div className='w-full h-screen bg-[#3fe745]' id={aboutId}>
         
       </div>
     </>

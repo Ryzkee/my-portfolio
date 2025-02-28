@@ -14,7 +14,13 @@ function App() {
         contactsId = 'contact'
 
   return (
-    <div className=' w-full h-screen bg-[#161a30]' >
+    <div 
+      className=' w-full h-screen'
+      style={{
+        background:"rgb(22,26,48)",
+        background: "linear-gradient(180deg, rgba(22,26,48,1) 25%, rgba(22,26,48,1) 35%, rgba(57,63,96,1) 50%, rgba(22,26,48,1) 65%, rgba(22,26,48,1) 76%)"
+      }}
+    >
       <Navbar aboutId={aboutId} homeId={homeId}/>
       <Home homeId={homeId}/>
       <About aboutId={aboutId}/>

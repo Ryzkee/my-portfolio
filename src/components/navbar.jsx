@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react';
 import Logo from '../image/gotlogo.png'
 import gitlogo from '../image/rounded.png'
@@ -7,10 +7,28 @@ import { Link } from 'react-scroll';
 function Header() {
   const [active, setActive] = useState("Home");
   const [bgColor, setBgColor] = useState("bg-[#3674B5]");
-  
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["Home", "About", "Skills", "Projects", "Contact"];
+      sections.forEach((section) => {
+        const element = document.getElementById(section.toLowerCase());
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            setActive(section);
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <header className='container flex justify-between items-center h-20 pt-5 font-mono fixed bg-[#161a30]'>
+      <header className='container flex justify-between items-center h-20 pt-5 font-mono fixed bg-[#161a30] z-10'>
           <div className='text-white h-full w-[6%] flex items-center'>
             <img src={Logo} alt="" className='w-full h-[70%] ml-10 '/>
           </div>
